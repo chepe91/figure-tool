@@ -1,0 +1,12 @@
+
+.figure {
+    width: 100px;
+    height: 100px;
+    transition: width 1s, height 1s;
+    cursor: pointer;
+}
+
+.selected {
+    width: 120px;
+    height: 120px;
+}

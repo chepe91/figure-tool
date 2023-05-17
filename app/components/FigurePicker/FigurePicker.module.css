@@ -1,0 +1,57 @@
+
+.figurePicker {
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.figurePickerContent {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 350px;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.figures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-height: 130px;
+}
+
+.addBtnContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addBtn {
+    background-color: #04AA6D;
+    border-color: #04AA6D;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
