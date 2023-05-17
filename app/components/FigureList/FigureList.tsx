@@ -47,20 +47,20 @@ export const FigureList = () => {
     }
 
     return <div>
-        <div className={styles.figureList}>
+        <div className={styles.figureList} >
         {figures.length === 0 ? 
             <button className={styles.addBtn} onClick={()=> {showFigurePicker(0)}}>+</button> : 
             <>
                 {figures.map((figure: FigureData, index: number)=> {
                     const isSelected = selectedFigure === index;
                     
-                    return <div key={index} className={styles.figureContainer}>
+                    return <div key={index} className={styles.figureContainer} data-testid="figure">
                         {isSelected && <button onClick={()=> { deleteFigure(index) }} className={styles.deleteBtn}>Delete</button>}
                         <div className={styles.figure}>
                             {isSelected && <button className={styles.addBtn} onClick={()=> {showFigurePicker(index)}}>+</button>}
                             <Figure 
                                 {...figure} 
-                                onClick={()=> { selectFigure(index) }} 
+                                onClick={()=> { selectFigure(index) }}
                                 isSelected={isSelected}
                             />
                             {isSelected && <button className={styles.addBtn} onClick={()=> {showFigurePicker(index+1)}}>+</button>}
